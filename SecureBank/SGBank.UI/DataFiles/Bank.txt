@@ -1,0 +1,4 @@
+﻿AccountNumber,Name,Balance,AccountType
+1,John Elway,10000,1
+2,CJ Whales, 9999999,3
+3,Dave Balzer, 4, 1 
