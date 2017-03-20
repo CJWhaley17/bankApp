@@ -1,0 +1,7 @@
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\bin\Debug\SGBank.Data.dll
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\bin\Debug\SGBank.Data.pdb
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\bin\Debug\SGBank.Models.dll
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\bin\Debug\SGBank.Models.pdb
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\obj\Debug\SGBank.Data.csprojResolveAssemblyReference.cache
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\obj\Debug\SGBank.Data.dll
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.Data\obj\Debug\SGBank.Data.pdb

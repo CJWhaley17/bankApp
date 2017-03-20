@@ -16,7 +16,11 @@ namespace SGBank.BLL
 
         public AccountManager()
         {
-            _repo = AccountRepositoryFactory.GetAccountRepository();
+            try
+            {
+                _repo = AccountRepositoryFactory.GetAccountRepository();
+            }
+            catch(Exception ex) { }
         }
 
         public Response<DepositReceipt> Deposit(decimal amount, Account account)
@@ -50,17 +54,29 @@ namespace SGBank.BLL
                 result.Message = "Account no longer valid.";
             }
             return result;
-            
+
         }
 
         public void AddNewAccount(Account newAccount)
         {
-            _repo.AddAccount(newAccount);
+            try
+            {
+                _repo.AddAccount(newAccount);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         public void DeleteAccount(Account account)
         {
-            _repo.DeleteAccount(account.AccountNumber);
+            try
+            {
+                _repo.DeleteAccount(account.AccountNumber);
+            }
+            catch (Exception ex) { }
+
 
         }
 

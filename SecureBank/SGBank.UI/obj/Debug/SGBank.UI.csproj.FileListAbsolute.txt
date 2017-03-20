@@ -1,1 +1,14 @@
 C:\Users\CJ\Desktop\_repo\corey-whaley-individual-work\SecureBank\SGBank.UI\bin\Debug\SGBank.UI.exe.config
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.UI.exe.config
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\DataFiles\Bank.txt
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.UI.exe
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.UI.pdb
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.BLL.dll
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.Models.dll
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.Data.dll
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.BLL.pdb
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.Models.pdb
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\bin\Debug\SGBank.Data.pdb
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\obj\Debug\SGBank.UI.csprojResolveAssemblyReference.cache
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\obj\Debug\SGBank.UI.exe
+C:\Users\aholub.DTS-DOC\Desktop\_repo\bankApp\SecureBank\SGBank.UI\obj\Debug\SGBank.UI.pdb

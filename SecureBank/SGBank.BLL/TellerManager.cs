@@ -19,12 +19,20 @@ namespace SGBank.BLL
 
         public TellerManager()
         {
-            _repo = TellerRepositoryFactory.GetTellerRepository();
+            try
+            {
+                _repo = TellerRepositoryFactory.GetTellerRepository();
+            }
+            catch(Exception ex) { }
         }
 
         public void AddNewTeller(Teller newTeller)
         {
-            _repo.AddTeller(newTeller);
+            try
+            {
+                _repo.AddTeller(newTeller);
+            }
+            catch(Exception ex) { }
         }
 
         public Response<Teller> GetTelleResponse(int tellerNumber)
