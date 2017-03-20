@@ -17,67 +17,93 @@ namespace SGBank.Data.Repositories
         public List<Account> ListAccounts()
         {
             List<Account> results = new List<Account>();
-
-            var rows = File.ReadAllLines(_filePath);
-
-            for (int i = 1; i < rows.Length; i++)
+            try
             {
-                var columns = rows[i].Split(',');
+                var rows = File.ReadAllLines(_filePath);
 
-                var account = new Account();
-                account.AccountNumber = int.Parse(columns[0]);
-                account.Name = columns[1];
-                account.Balance = decimal.Parse(columns[2]);
-                account.Type = (AccountType) int.Parse(columns[3]);
+                for (int i = 1; i < rows.Length; i++)
+                {
+                    var columns = rows[i].Split(',');
 
-                results.Add(account);
+                    var account = new Account();
+                    account.AccountNumber = int.Parse(columns[0]);
+                    account.Name = columns[1];
+                    account.Balance = decimal.Parse(columns[2]);
+                    account.Type = (AccountType)int.Parse(columns[3]);
+
+                    results.Add(account);
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
             return results;
         }
 
         public Account LoadAccount(int accountNumber)
         {
-            List<Account> accounts = ListAccounts();
-            return accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            try
+            {
+                List<Account> accounts = ListAccounts();
+                return accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            }
+            catch (Exception ex) { }
         }
 
         public void AddAccount(Account account)
         {
-            var accounts = ListAccounts();
-            accounts.Add(account);
-            OverwriteFile(accounts);
+            try
+            {
+                var accounts = ListAccounts();
+                accounts.Add(account);
+                OverwriteFile(accounts);
+
+            }
+            catch (Exception ex) { }
         }
 
         public void UpdateAccount(Account account)
         {
-            var accounts = ListAccounts();
-            var accountToUpdate = accounts.First(a => a.AccountNumber == account.AccountNumber);
-            accountToUpdate.Name = account.Name;
-            accountToUpdate.Balance = account.Balance;
-            accountToUpdate.Type = account.Type;
-            OverwriteFile(accounts);
+            try
+            {
+                var accounts = ListAccounts();
+                var accountToUpdate = accounts.First(a => a.AccountNumber == account.AccountNumber);
+                accountToUpdate.Name = account.Name;
+                accountToUpdate.Balance = account.Balance;
+                accountToUpdate.Type = account.Type;
+                OverwriteFile(accounts);
+            }
+            catch (Exception ex) { }
         }
 
         public void DeleteAccount(int accountNumber)
         {
-            var accounts = ListAccounts();
-            var accountToRemove = accounts.First(a => a.AccountNumber == accountNumber);
-            accounts.Remove(accountToRemove);
-            OverwriteFile(accounts);
+            try
+            {
+                var accounts = ListAccounts();
+                var accountToRemove = accounts.First(a => a.AccountNumber == accountNumber);
+                accounts.Remove(accountToRemove);
+                OverwriteFile(accounts);
+            }
+            catch (Exception ex) { }
         }
 
         public void OverwriteFile(List<Account> accounts)
         {
-            File.Delete(_filePath);
-
-            using (var writer = File.CreateText(_filePath))
+            try
             {
-                writer.WriteLine("AccountNumber,Name,Balance,AccountType");
-                foreach (var account in accounts)
+                File.Delete(_filePath);
+                using (var writer = File.CreateText(_filePath))
                 {
-                    writer.WriteLine($"{account.AccountNumber},{account.Name},{account.Balance},{(int)account.Type}");
+                    writer.WriteLine("AccountNumber,Name,Balance,AccountType");
+                    foreach (var account in accounts)
+                    {
+                        writer.WriteLine($"{account.AccountNumber},{account.Name},{account.Balance},{(int)account.Type}");
+                    }
                 }
             }
+            catch (Exception ex) { }            
         }
     }
 }
