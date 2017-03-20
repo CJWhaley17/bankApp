@@ -48,7 +48,7 @@ namespace SGBank.Data.Repositories
                 List<Account> accounts = ListAccounts();
                 return accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
             }
-            catch (Exception ex) { }
+            catch (Exception ex) { return null; }
         }
 
         public void AddAccount(Account account)
